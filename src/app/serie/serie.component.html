@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="h4">#</th>
+                <th class="h4">Name</th>
+                <th class="h4">Channel</th>
+                <th class="h4">Seasons</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let s of series">
+                <th scope="row">
+                  <dd>{{s.id}}</dd>
+                </th>
+                <td>
+                  <dd>
+                    <a href="{{s.webpage}}">{{s.name}}</a>
+                  </dd>
+                </td>
+                <td>
+                  <dd>{{s.channel}}</dd>
+                </td>
+                <td>
+                  <dd>{{s.seasons}}</dd>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Average seasons: {{seasonsAvg}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
